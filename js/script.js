@@ -106,22 +106,28 @@ regionsRequest.onload = function () {
         let regionsData = regionsRequest.response;
         let provincesData = getProvinces(provincesRequest.response);
 
-        // Visualizza i cerchi sulla mappa
-        circles = instantiateCircles(regionsData, provincesData, circles, mappa, 'totale_positivi');
+        // Entrambi i files son stati reperiti?
+        if (regionsData != null && provincesData != null) {
+            // Visualizza i cerchi sulla mappa
+            circles = instantiateCircles(regionsData, provincesData, circles, mappa, 'totale_positivi');
 
-        // Aggiorna tabella regioni
-        regionsWindow.innerHTML = getRegionsTable(regionsData);
+            // Aggiorna tabella regioni
+            regionsWindow.innerHTML = getRegionsTable(regionsData);
 
-        // Radio buttons per visualizzare solamente un tipo di dato (positivi, deceduti, guariti)
-        let markers = document.querySelectorAll('input[name="markers"]');
-        markers[0].checked = true; // Resetta scelta dopo il refresh della pagina (per Firefox)
+            // Radio buttons per visualizzare solamente un tipo di dato (positivi, deceduti, guariti)
+            let markers = document.querySelectorAll('input[name="markers"]');
+            markers[0].checked = true; // Resetta scelta dopo il refresh della pagina (per Firefox)
 
-        markers.forEach(function (marker) {
-            marker.addEventListener('change', function () {
-                circles = instantiateCircles(regionsData, provincesData, circles, mappa, marker.value);
-                regionsWindow.innerHTML = getRegionsTable(regionsData);
-            })
-        });
+            markers.forEach(function (marker) {
+                marker.addEventListener('change', function () {
+                    circles = instantiateCircles(regionsData, provincesData, circles, mappa, marker.value);
+                    regionsWindow.innerHTML = getRegionsTable(regionsData);
+                })
+            });
+        } else {
+            loadingScreen.innerHTML = 'Impossibile reperire le statistiche, riprovare più tardi.';
+            return 1;
+        }
 
         // Nascondi schermata di caricamento
         loadingScreen.style.display = 'none';
@@ -150,7 +156,7 @@ function instantiateCircles(regionsData, provincesData, array, map, key) {
             // Header tabella province (stemma + nome regione)
             regionHeader.innerHTML = '';
             let flag = new Image();
-            flag.src = 'res/flags/' + pair.regionName + '.svg';
+            flag.src = 'res/images/flags/' + pair.regionName + '.svg';
             regionHeader.append(flag, pair.regionName);
 
             // Nascondi tabella regioni e mostra quella delle province
@@ -300,6 +306,7 @@ function getProvinces(data) {
     return list;
 }
 
+
 window.onresize = function () {
     mapDiv.style.height = window.innerHeight + 'px';
 }
@@ -314,7 +321,7 @@ window.onresize = function () {
 visibilityBtn.onclick = function () {
     areWindowsVisible = !areWindowsVisible;
     container.style.display = areWindowsVisible ? 'block' : 'none';
-    visibilityBtn.querySelector("img").src = "res/gui/eye_" + areWindowsVisible + ".svg";
+    visibilityBtn.querySelector("img").src = "res/images/gui/eye_" + areWindowsVisible + ".svg";
 }
 
 // Pulsante per ricentrare la mappa sull'Italia
@@ -332,5 +339,5 @@ toggleModeBtn.onclick = function () {
     }).addTo(mappa);
 
     darkThemeEnabled = !darkThemeEnabled;
-    toggleModeBtn.querySelector("img").src = "res/gui/theme_" + darkThemeEnabled + ".svg";
+    toggleModeBtn.querySelector("img").src = "res/images/gui/theme_" + darkThemeEnabled + ".svg";
 }
