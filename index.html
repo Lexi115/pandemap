@@ -1,0 +1,42 @@
+<!--
+    "PandeMap"
+    Covid Map PCTO v. 1.3.3
+    Sica Alessio IV A INF 2020/21
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link rel="stylesheet" href="leaflet/leaflet.css">
+    <title>PandeMap</title>
+    <link rel="shortcut icon" type="image/png" href="img/logo.png">
+    <script src="leaflet/leaflet.js"></script>
+</head>
+
+<body>
+    <div id="loadingScreen">Attendere...</div>
+    <div id="italyMap"></div>
+    <div id="container">
+        <div class="window" id="provincesWindow">
+            <div id="regionHeader"></div>
+            <div id="provincesContent"></div>
+        </div>
+        <div class="window" id="regionsWindow"></div>
+        <div class="window" id="markersWindow">
+            <input type="radio" name="markers" id="positivesMarker" value="totale_positivi">
+            <label for="positivesMarker">Positivi</label><br>
+            <input type="radio" name="markers" id="deceasedMarker" value="deceduti">
+            <label for="deceasedMarker">Deceduti</label><br>
+            <input type="radio" name="markers" id="healedMarker" value="dimessi_guariti">
+            <label for="healedMarker">Guariti</label><br>
+        </div>
+    </div>
+    <div class="button" id="visibilityBtn" title="Mostra / Nascondi tabelle"><img src="img/gui/eye_true.svg"></div>
+    <div class="button" id="centerBtn" title="Centra mappa"><img src="img/gui/center.svg"></div>
+    <div class="button" id="toggleModeBtn" title="Cambia tema"><img src="img/gui/theme_true.svg"></div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

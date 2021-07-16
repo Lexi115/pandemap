@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="svg855"
+   version="1.1"
+   viewBox="0 0 308.13822 310.3908"
+   height="310.39081"
+   width="308.13821"
+   sodipodi:docname="Regione-Emilia-Romagna-Stemma.svg"
+   inkscape:version="0.91 r13725">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1440"
+     inkscape:window-height="855"
+     id="namedview34"
+     showgrid="false"
+     fit-margin-top="5"
+     fit-margin-right="5"
+     fit-margin-left="5"
+     fit-margin-bottom="5"
+     inkscape:zoom="1.7043566"
+     inkscape:cx="41.134162"
+     inkscape:cy="159.89913"
+     inkscape:window-x="0"
+     inkscape:window-y="1"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g853" />
+  <metadata
+     id="metadata861">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs859" />
+  <g
+     id="g943"
+     transform="matrix(0.8696685,0,0,0.8696685,-163.10206,-56.3218)">
+    <g
+       id="g853"
+       transform="matrix(0.87488863,0,0,0.87488863,-31.601226,-10.318068)"
+       style="fill:none;fill-rule:evenodd;stroke:none;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter">
+      <g
+         id="g842"
+         transform="translate(0,-5.2571874)"
+         style="fill:#ffffff;fill-opacity:1">
+        <path
+           id="rect843"
+           d="M 263.48236,104.07187 H 642.47241 V 486.02248 H 263.48236 Z"
+           style="fill:#ffffff;fill-opacity:1;stroke:#009a49;stroke-width:12.85210228;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           inkscape:connector-curvature="0" />
+      </g>
+      <path
+         sodipodi:nodetypes="cccsscc"
+         inkscape:connector-curvature="0"
+         d="m 258.74893,279.52014 388.20488,206.3569 0.14203,-306.10119 c 0,0 -46.6514,17.96473 -101.97186,15.60317 -62.16544,-2.65377 -135.48059,-25.50389 -169.77844,-22.15439 -64.8192,6.33021 -116.10044,25.81659 -116.10044,25.81659 z"
+         id="path845"
+         style="fill:#009a49;fill-opacity:1;stroke:none;stroke-width:0" />
+    </g>
+  </g>
+</svg>
