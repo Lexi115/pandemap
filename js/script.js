@@ -1,11 +1,7 @@
 /*
     "PandeMap"    
-    Covid Map PCTO v. 1.3.3
+    Covid Map PCTO v. 1.3.4
     Sica Alessio IV A INF 2020/21
-
-    In collaborazione con:
-        - Antonio Ceruso
-        - Carmelo Cappiello
 */
 
 // ---------------------------------------------------
@@ -154,7 +150,7 @@ function instantiateCircles(regionsData, provincesData, array, map, key) {
             // Header tabella province (stemma + nome regione)
             regionHeader.innerHTML = '';
             let flag = new Image();
-            flag.src = 'img/flags/' + pair.regionName + '.svg';
+            flag.src = 'res/flags/' + pair.regionName + '.svg';
             regionHeader.append(flag, pair.regionName);
 
             // Nascondi tabella regioni e mostra quella delle province
@@ -318,7 +314,7 @@ window.onresize = function () {
 visibilityBtn.onclick = function () {
     areWindowsVisible = !areWindowsVisible;
     container.style.display = areWindowsVisible ? 'block' : 'none';
-    visibilityBtn.querySelector("img").src = "img/gui/eye_" + areWindowsVisible + ".svg";
+    visibilityBtn.querySelector("img").src = "res/gui/eye_" + areWindowsVisible + ".svg";
 }
 
 // Pulsante per ricentrare la mappa sull'Italia
@@ -336,5 +332,5 @@ toggleModeBtn.onclick = function () {
     }).addTo(mappa);
 
     darkThemeEnabled = !darkThemeEnabled;
-    toggleModeBtn.querySelector("img").src = "img/gui/theme_" + darkThemeEnabled + ".svg";
+    toggleModeBtn.querySelector("img").src = "res/gui/theme_" + darkThemeEnabled + ".svg";
 }
